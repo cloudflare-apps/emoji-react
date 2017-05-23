@@ -5,7 +5,7 @@
 
   var options = INSTALL_OPTIONS
   var element
-  var BUTTON_WIDTH = 52
+  var BUTTON_WIDTH = 56
   var BUTTON_HEIGHT = 35
   var resizeHandler
 
