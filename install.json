@@ -1,0 +1,110 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "style",
+        "src": "./source/app.css"
+      },
+      {
+        "type": "script",
+        "src": "./source/app.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["location", "emojis"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      },
+      {
+        "options": ["position"],
+        "execute": "INSTALL_SCOPE.setPosition(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "location": {
+        "title": "Emoji location",
+        "order": 0,
+        "type": "object",
+        "format": "element",
+        "default": {
+          "selector": "body",
+          "method": "prepend"
+        }
+      },
+      "position": {
+        "order": 1,
+        "title": "Horizontal alignment",
+        "type": "string",
+        "default": "center",
+        "enum": [
+          "left",
+          "center",
+          "right"
+        ],
+        "enumNames": {
+          "left": "Left",
+          "center": "Center",
+          "right": "Right"
+        }
+      },
+      "emojis": {
+        "title": "Emojis",
+        "type": "array",
+        "order": 2,
+        "default": [
+          {"value":"thumbsup"},
+          {"value":"thumbsdown"},
+          {"value":"heart"},
+          {"value":"cry"},
+          {"value":"laughing"}
+        ],
+        "items": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "title": "Emoji",
+              "type": "string",
+              "default": "smile",
+              "enum": [
+                "smile",
+                "laughing",
+                "cry",
+                "blush",
+                "neutral_face",
+                "fire",
+                "tada",
+                "thumbsup",
+                "thumbsdown",
+                "clap",
+                "poop",
+                "heart",
+                "rocket",
+                "whale"
+              ],
+              "enumNames": {
+                "smile": "😀 Smile",
+                "laughing": "😆 Laughing",
+                "cry": "😢 Cry",
+                "blush": "😊 Blush",
+                "neutral_face": "😐 Neutral Face",
+                "fire": "🔥 Fire",
+                "tada": "🎉 Tada",
+                "thumbsup": "👍 Thumbsup",
+                "thumbsdown": "👎 Thumbsdown",
+                "clap": "👏 Clap",
+                "poop": "💩 Poop",
+                "heart": "❤️ Heart",
+                "rocket": "🚀 Rocket",
+                "whale": "🐳 Whale"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

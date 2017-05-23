@@ -1,0 +1,27 @@
+/* Set the app attribute to your app's dash-delimited alias. */
+cloudflare-app[app="emoji-react"] {
+  display: flex;
+  margin: 1em 2em;
+}
+
+cloudflare-app[app="emoji-react"] > iframe {
+  flex: 0 0 auto;
+  border: none;
+  overflow: hidden;
+  height: 35px;
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}
+
+cloudflare-app[app="emoji-react"][data-position="left"] {
+  justify-content: flex-start;
+}
+
+cloudflare-app[app="emoji-react"][data-position="center"] {
+  justify-content: center;
+}
+
+cloudflare-app[app="emoji-react"][data-position="right"] {
+  justify-content: flex-end;
+}
